@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "trixie";
+    src: url("TrixiePlain.ttf");
+  }
+  
+  @font-face {
+    font-family: "bohemian-typewriter";
+    src: url("./Bohemian\ Typewriter.ttf");
+  }
+  
+  @font-face {
+    font-family: "cafe";
+    src: url("./Cafe\ Francoise_D.otf");
+  }
+  
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+    /*1rem = 10px*/
+  }
+  
+  body {
+    box-sizing: border-box;
+    background-image: url(bg.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: "trixie";
+    font-size: 1.6rem;
+    color: #000;
+
+  }
+
+  
+  #loader {
+    position: absolute;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url(./bg.jpeg);
+    background-size: cover;
+    z-index: 99999;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-gif {
+    width: 35rem;
+  }
+  
+  .csilogo {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 20rem;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 27rem;
+  }
+
+  .leaderboard {
+    min-width: 100vw;
+    margin: 8rem auto;
+    background-color: #eee;
+}
+
+.leaderboard__heading{
+    height: 100px;
+    display: flex;
+    background-color: #5643fa;
+    color: white;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.participant {
+    display: flex;
+    justify-content: space-around;
+    height: 5rem;
+    align-items: center;
+    background-color: #ddd;
+}
+
+.participant:nth-child(even) {
+    background-color: #ccc;
+}
+  
+  /* .btn-signout {
+      position: fixed;
+      width: 22rem;
+      top: 2rem;
+      right: 1rem;
+  
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-family: 'trixie';
+      font-size: 12rem;
+      padding-bottom: 5px;
+      line-height: .5;
+  } */
+  
+  .btn-signout {
+    position: fixed;
+    margin: 0 auto;
+    bottom: 1rem;
+    left: 2rem;
+  
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: "trixie";
+    font-size: 4rem;
+    padding-bottom: 5px;
+    transition: all 0.2s;
+  }
+  
+  .btn-signout:hover {
+    transform: scale(1.1);
+  }
+  
+  .btn-signout:active {
+    transform: scale(1);
+  }
+  
+  .btn-signout:disabled {
+    color: rgba(0,0,0, .5);
+    cursor: url('./cursor.png'), auto;
+  }
+  
+  /* .info {
+    width: 100%;
+    text-align: center;
+    font-family: "trixie";
+    font-weight: 100;
+    font-size: 6rem;
+  
+    margin-bottom: 2.5rem;
+    margin-top: 10rem;
+  } */
+  
+
+  
+  
+  @media only screen and (max-width: 1000px) {
+    html {
+      font-size: 50%;
+    }
+  
+    .timer {
+      width: 50vw;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    html {
+      font-size: 40%;
+    }
+
+    .leaderboard {
+        max-width: 80vw;
+    }
+  
+  
+  
+    /* .btn-signout {
+          width: 22rem;
+          top: 1rem;
+          right: 1rem;
+      } */
+  
+    .logo {
+      width: 22rem;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 1vw;
+    }
+  
+    .timer {
+      width: 80vw;
+    }
+  }
+  
